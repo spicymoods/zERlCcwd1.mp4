@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Watch on Videy</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#ececec;
+    font-family:Arial,sans-serif;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    background:white;
+    padding:18px 40px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    box-shadow:0 1px 3px rgba(0,0,0,0.08);
+}
+
+.logo{
+    font-size:42px;
+    font-weight:bold;
+    color:black;
+}
+
+.upload-btn{
+    background:#f2f2f2;
+    border:none;
+    padding:10px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* PLAYER */
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+.player{
+    width:820px;
+    height:460px;
+    background:black;
+    border-radius:24px;
+    overflow:hidden;
+    position:relative;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* VIDEO */
+
+video{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    background:black;
+}
+
+/* PLAY OVERLAY */
+
+.overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,0.2);
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.play-btn{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#ff5f5f,#ff0066);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 0 30px rgba(255,0,100,0.5);
+}
+
+.play-btn:before{
+    content:'';
+    width:0;
+    height:0;
+    border-top:18px solid transparent;
+    border-bottom:18px solid transparent;
+    border-left:28px solid white;
+    margin-left:5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Videy</div>
+
+    <button class="upload-btn">
+        Upload
+    </button>
+</header>
+
+<div class="container">
+
+    <div class="player">
+
+        <!-- VIDEO -->
+        <video id="video" controls>
+            <source src="https://cdn.slicedrive.com/zERlCcwd1.mp4" type="video/mp4">
+        </video>
+
+        <!-- OVERLAY PLAY -->
+        <div class="overlay" id="overlay">
+
+            <div class="play-btn"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- POPUNDER IKLAN -->
+<script src="https://acquitfamouscavity.com/c3/1d/cd/c31dcdfa2c3e587649f908c7ea8504eb.js"></script>
+
+<script>
+const overlay = document.getElementById("overlay");
+const video = document.getElementById("video");
+
+overlay.addEventListener("click", function(){
+
+    // buka video
+    video.play();
+
+    // hilangkan tombol overlay
+    overlay.style.display = "none";
+
+});
+</script>
+   <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4953612,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4953612&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+</html>
